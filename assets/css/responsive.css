@@ -1,0 +1,66 @@
+/* ===================================
+   MediaQuerry Adaptativa Atualizada
+=================================== */
+
+/* Dispositivos pequenos (smartphones) */
+@media (max-width: 575.98px) {
+  .card-box {
+    width: 400px;
+    height: 100px;
+    padding: 20px 0 40px;
+  }
+  
+  .card-box h3 {
+    font-size: 24px;
+  }
+  
+  .card-box p {
+    font-size: 16px;
+  }
+  
+  .icon img {
+    height: 40px;
+    max-width: 40px;
+  }
+  
+  .profile-img {
+    width: 200px;
+    scale: 1.5;
+  }
+}
+
+/* Dispositivos médios (tablets) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .card-box {
+    width: 400px;
+    height: 100px;
+  }
+  
+  .icon img {
+    height: 50px;
+    max-width: 50px;
+  }
+}
+
+/* Dispositivos grandes (desktops) */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .card-box {
+    width: 400px;
+    height: 100px;
+  }
+}
+
+/* Dispositivos extra grandes (desktops grandes) */
+@media (min-width: 1200px) {
+  .card-box {
+    width: 400px;
+    height: 100px;
+  }
+}
+
+/* Ajuste adicional para garantir que os ícones não quebrem */
+@media (max-width: 767.98px) {
+  .card-box .inner {
+    padding-right: 50px; /* Espaço para o ícone */
+  }
+}

@@ -1,0 +1,319 @@
+/*=================================================
+  Summary
+=================================================
+
+	1. Geral
+	2. Animações
+	3. Cartões
+	4. Header
+	5  Profile CSS
+	7. Footer
+	8. Extra
+		8.1 Splash Screen
+		8.2 Extras
+
+=======================================================*/
+
+/* ===================================
+   1. Geral
+=================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=Orbitron:wght@400..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron';
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+
+/* ===================================
+   2. Animações
+=================================== */
+/* Animações */
+.anim-typewriter {
+  animation: typewriter 3s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 24em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(249, 245, 215, 0.75);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-15px);
+  }
+}
+
+/* ===================================
+   3. Cartões
+=================================== */
+
+/* Cartões */
+.card-box {
+  width: 400px;
+  height: 100px;
+  color: #f9f5d7;
+  padding: 20px 0 40px;
+  margin: 10px 0;
+  text-align: left;
+
+  /* Formato octogonal preciso */
+  clip-path: polygon(
+      5% 0%, 95% 0%, /* Topo */
+      100% 20%, 100% 80%, /* Lados */
+      95% 100%, 5% 100%, /* Base */
+      0% 80%, 0% 20% /* Lados */
+    );
+}
+
+.card-box:hover {
+  text-decoration: none;
+  color: #f9f5d7;
+}
+
+.card-box:hover .icon img {
+  font-size: 100px;
+  transition: 1s;
+  -webkit-transition: 1s;
+}
+
+.card-box .inner {
+  padding: 5px 10px 0 10px;
+}
+
+.card-box h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-box p {
+  font-size: 15px;
+}
+
+.card-box .icon {
+  position: absolute;
+  top: auto;
+  bottom: 5px;
+  right: 5px;
+  z-index: 1;
+  font-size: 70px;
+  color: rgba(40, 40, 40, 0.15);
+}
+
+.card-box .card-box-footer {
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  text-align: center;
+  padding: 5px 0;
+  color: rgba(249, 245, 215, 0.8);
+  background: rgba(40, 40, 40, 0.1);
+  width: 100%;
+  text-decoration: none;
+}
+
+.card-box:hover .card-box-footer {
+  background: rgba(40, 40, 40, 1);
+}
+
+.icon img {
+  height: 80px;
+  width: auto;
+  display: block;
+  padding: 10px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+/* Background */
+.bg-whatsapp {
+  background: #98971a;
+}
+
+.bg-instagram {
+  background: #8f3f71;
+}
+
+.bg-facebook {
+  background: #076678;
+}
+
+.bg-portifolio {
+  background: #fe8019;
+}
+
+.bg-github {
+  background: #665c54;
+}
+
+.bg-linkedin {
+  background: #282828;
+}
+
+/* ===================================
+   4. Header
+=================================== */
+#header {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#header .navbar {
+  padding: 0px;
+  min-height: 70px;
+}
+
+.head {
+  margin-bottom: 20px;
+  color: rgba(249, 245, 215);
+}
+
+
+/* ===================================
+   5. Profile CSS
+=================================== */
+.profile-img {
+  scale: 1.5;
+  animation: bounce 2s;
+}
+
+
+/* ===================================
+   6. Footer
+=================================== */
+
+footer {
+  color: rgb(249, 245, 215);
+}
+
+/* ===================================
+   7. Extra
+=================================== */
+
+/* Splash Screen */
+#splash-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: linear-gradient(90deg, #076678, #458588);
+}
+
+#splash-screen img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+/* Extra */
+.line-1 {
+  position: relative;
+  top: 50%;
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(249, 245, 215, .75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.legend {
+  margin: 0;
+}
+
+h1.text-center {
+  margin-bottom: -10px;
+}
+
+h3.text-center {
+  font-size: 25px;
+}
+
+.jumper {
+  height: 100px;
+  width: 300px;
+}
+
+.lines {
+  width: 80%;
+}
+
+.inner h3 {
+  font-size: 20px;
+}
+
+
+/* Popup For Session */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(31, 30, 30);
+  padding: 20px;
+  width: 80%;
+  border-radius: 10px;
+  z-index: 99;
+}
+
+.popup-content {
+  max-width: 80%;
+  word-wrap: break-word;
+  color: rgb(249, 245, 215);
+}
+
+.close {
+  color: rgb(249, 245, 215);
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.close:hover {
+  color: #cc241d;
+}
