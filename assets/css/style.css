@@ -1,33 +1,31 @@
-/*=================================================
-  Summary
-=================================================
-
-	1. Geral
-	2. Animações
-	3. Cartões
-	4. Header
-	5  Profile CSS
-	7. Footer
-	8. Extra
-		8.1 Splash Screen
-		8.2 Extras
-
-=======================================================*/
-
 /* ===================================
-   1. Geral
+   Variáveis e Reset
 =================================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+:root {
+  --primary-blue: #076678;
+  --secondary-blue: #458588;
+  --whatsapp: #cc241d;
+  --instagram: #d79921;
+  --facebook: #d65d0e;
+  --portifolio: #98971a;
+  --github: #689d6a;
+  --linkedin: #458588;
+  --text-light: #f9f5d7;
+  --bg-dark: #1d2021;
+}
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Orbitron';
 }
 
-body {
+html, body {
   height: 100%;
-  margin: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -35,285 +33,152 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  height: 100%;
-  width: 100%;
-}
-
-
-/* ===================================
-   2. Animações
-=================================== */
-/* Animações */
-.anim-typewriter {
-  animation: typewriter 3s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
-}
-
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 24em;
-  }
-}
-
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(249, 245, 215, 0.75);
-  }
-
-  to {
-    border-right-color: transparent;
-  }
-}
-
-@keyframes bounce {
-
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-
-  40% {
-    transform: translateY(-15px);
-  }
+  background-size: cover;
+  color: var(--text-light);
 }
 
 /* ===================================
-   3. Cartões
+   Componentes Principais
 =================================== */
-
-/* Cartões */
-.card-box {
-  width: 400px;
-  height: 100px;
-  color: #f9f5d7;
-  padding: 20px 0 40px;
-  margin: 10px 0;
-  text-align: left;
-
-  /* Formato octogonal preciso */
-  clip-path: polygon(
-      5% 0%, 95% 0%, /* Topo */
-      100% 20%, 100% 80%, /* Lados */
-      95% 100%, 5% 100%, /* Base */
-      0% 80%, 0% 20% /* Lados */
-    );
-}
-
-.card-box:hover {
-  text-decoration: none;
-  color: #f9f5d7;
-}
-
-.card-box:hover .icon img {
-  font-size: 100px;
-  transition: 1s;
-  -webkit-transition: 1s;
-}
-
-.card-box .inner {
-  padding: 5px 10px 0 10px;
-}
-
-.card-box h3 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.card-box p {
-  font-size: 15px;
-}
-
-.card-box .icon {
-  position: absolute;
-  top: auto;
-  bottom: 5px;
-  right: 5px;
-  z-index: 1;
-  font-size: 70px;
-  color: rgba(40, 40, 40, 0.15);
-}
-
-.card-box .card-box-footer {
-  position: relative;
-  left: 0px;
-  bottom: 0px;
-  text-align: center;
-  padding: 5px 0;
-  color: rgba(249, 245, 215, 0.8);
-  background: rgba(40, 40, 40, 0.1);
-  width: 100%;
-  text-decoration: none;
-}
-
-.card-box:hover .card-box-footer {
-  background: rgba(40, 40, 40, 1);
-}
-
-.icon img {
-  height: 80px;
-  width: auto;
-  display: block;
-  padding: 10px;
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-}
-
-/* Background */
-.bg-whatsapp {
-  background: #98971a;
-}
-
-.bg-instagram {
-  background: #8f3f71;
-}
-
-.bg-facebook {
-  background: #076678;
-}
-
-.bg-portifolio {
-  background: #fe8019;
-}
-
-.bg-github {
-  background: #665c54;
-}
-
-.bg-linkedin {
-  background: #282828;
-}
-
-/* ===================================
-   4. Header
-=================================== */
-#header {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-#header .navbar {
-  padding: 0px;
-  min-height: 70px;
-}
-
-.head {
-  margin-bottom: 20px;
-  color: rgba(249, 245, 215);
-}
-
-
-/* ===================================
-   5. Profile CSS
-=================================== */
-.profile-img {
-  scale: 1.5;
-  animation: bounce 2s;
-}
-
-
-/* ===================================
-   6. Footer
-=================================== */
-
-footer {
-  color: rgb(249, 245, 215);
-}
-
-/* ===================================
-   7. Extra
-=================================== */
-
-/* Splash Screen */
 #splash-screen {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  background: linear-gradient(90deg, #076678, #458588);
+  background-image: url("../images/background.png");
 }
 
-#splash-screen img {
-  max-width: 100%;
-  max-height: 100%;
+.profile-img {
+  animation: bounce 2s;
+  max-width: auto;
+  height: auto;
+  scale: 1.8;
 }
 
-
-/* Extra */
-.line-1 {
-  position: relative;
-  top: 50%;
-  width: 24em;
-  margin: 0 auto;
-  border-right: 2px solid rgba(249, 245, 215, .75);
-  font-size: 180%;
+.head {
+  margin-bottom: 2rem;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  transform: translateY(-50%);
+  font-size: 2rem;
 }
 
-.legend {
-  margin: 0;
+/* ===================================
+   Cards Octogonais
+=================================== */
+.card-box {
+  position: relative;
+  color: var(--text-light);
+  margin: 1rem 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  clip-path: polygon(
+    5% 0%, 95% 0%,
+    100% 20%, 100% 80%,
+    95% 100%, 5% 100%,
+    0% 80%, 0% 20%
+  );
 }
 
-h1.text-center {
-  margin-bottom: -10px;
+.card-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 5px;
 }
 
-h3.text-center {
-  font-size: 25px;
+.card-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-.jumper {
-  height: 100px;
-  width: 300px;
+.card-box .inner {
+  padding: 1.5rem;
+  padding-right: 4rem;
 }
 
+.card-box h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0rem;
+  text-transform: uppercase;
+}
+
+.card-box p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.icon {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.icon img {
+  margin: -0.553rem 0.5rem;
+  height: auto;
+  width: auto;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+/* Cores dos cards */
+.bg-whatsapp::before { background: var(--whatsapp); }
+.bg-instagram::before { background: var(--instagram); }
+.bg-facebook::before { background: var(--facebook); }
+.bg-portifolio::before { background: var(--portifolio); }
+.bg-github::before { background: var(--github); }
+.bg-linkedin::before { background: var(--linkedin); }
+
+/* ===================================
+   Elementos de Layout
+=================================== */
 .lines {
   width: 80%;
+  margin: 2rem auto;
+  border: 0;
+  height: 5px;
+  background-image: linear-gradient(to right, rgba(249, 245, 215, 0), rgba(249, 245, 215, 0.75), rgba(249, 245, 215, 0));
 }
 
-.inner h3 {
-  font-size: 20px;
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-
-/* Popup For Session */
-.popup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgb(31, 30, 30);
-  padding: 20px;
-  width: 80%;
-  border-radius: 10px;
-  z-index: 99;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
-.popup-content {
-  max-width: 80%;
-  word-wrap: break-word;
-  color: rgb(249, 245, 215);
+/* ===================================
+   Animações
+=================================== */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-15px); }
 }
 
-.close {
-  color: rgb(249, 245, 215);
-  float: right;
-  cursor: pointer;
-  font-size: 20px;
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 24em; }
 }
 
-.close:hover {
-  color: #cc241d;
+@keyframes blinkTextCursor {
+  from { border-right-color: rgba(249, 245, 215, 0.75); }
+  to { border-right-color: transparent; }
+}
+
+.anim-typewriter {
+  animation: typewriter 3s steps(44) 1s 1 normal both, 
+             blinkTextCursor 500ms steps(44) infinite normal;
 }
