@@ -53,7 +53,7 @@ function adjustOctogons() {
     card.style.height = `${width * 0.35}px`;
     
     if (width < 300) {
-      card.style.clipPath = 'polygon(7% 0%, 93% 0%, 100% 28%, 100% 72%, 93% 100%, 7% 100%, 0% 72%, 0% 28%)';
+      card.style.clipPath = 'polygon(8% 0%, 92% 0%, 100% 20%, 100% 80%, 92% 100%, 8% 100%, 0% 80%, 0% 20%)';
     } else {
       card.style.clipPath = 'polygon(5% 0%, 95% 0%, 100% 20%, 100% 80%, 95% 100%, 5% 100%, 0% 80%, 0% 20%)';
     }

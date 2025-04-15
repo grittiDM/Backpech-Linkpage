@@ -1,7 +1,7 @@
 /* ===================================
    Variáveis e Reset
 =================================== */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Orbitron:wght@600&display=swap');
 
 :root {
   --primary-blue: #076678;
@@ -14,16 +14,12 @@
   --linkedin: #458588;
   --text-light: #f9f5d7;
   --bg-dark: #1d2021;
+  --font-titulo: 'Orbitron';
+  --font-texto: 'Chakra Petch';
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Orbitron';
-}
-
-html, body {
+html,
+body {
   height: 100%;
   overflow-x: hidden;
 }
@@ -35,6 +31,15 @@ body {
   background-attachment: fixed;
   background-size: cover;
   color: var(--text-light);
+}
+
+h1,
+h2,
+h3,
+.card-box h3 {
+  font-family: var(--font-titulo);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* ===================================
@@ -72,12 +77,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  clip-path: polygon(
-    5% 0%, 95% 0%,
-    100% 20%, 100% 80%,
-    95% 100%, 5% 100%,
-    0% 80%, 0% 20%
-  );
+  clip-path: polygon(5% 0%, 95% 0%,
+      100% 20%, 100% 80%,
+      95% 100%, 5% 100%,
+      0% 80%, 0% 20%);
 }
 
 .card-box::before {
@@ -93,7 +96,7 @@ body {
 
 .card-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card-box .inner {
@@ -114,8 +117,8 @@ body {
 
 .icon {
   position: absolute;
-  right: 1rem;
-  bottom: 1rem;
+  right: 1.2rem;
+  bottom: 1.5rem;
 }
 
 .icon img {
@@ -123,16 +126,33 @@ body {
   height: auto;
   width: auto;
   transition: all 0.3s ease;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 /* Cores dos cards */
-.bg-whatsapp::before { background: var(--whatsapp); }
-.bg-instagram::before { background: var(--instagram); }
-.bg-facebook::before { background: var(--facebook); }
-.bg-portifolio::before { background: var(--portifolio); }
-.bg-github::before { background: var(--github); }
-.bg-linkedin::before { background: var(--linkedin); }
+.bg-whatsapp::before {
+  background: var(--whatsapp);
+}
+
+.bg-instagram::before {
+  background: var(--instagram);
+}
+
+.bg-facebook::before {
+  background: var(--facebook);
+}
+
+.bg-portifolio::before {
+  background: var(--portifolio);
+}
+
+.bg-github::before {
+  background: var(--github);
+}
+
+.bg-linkedin::before {
+  background: var(--linkedin);
+}
 
 /* ===================================
    Elementos de Layout
@@ -164,21 +184,41 @@ body {
    Animações
 =================================== */
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-15px); }
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-15px);
+  }
 }
 
 @keyframes typewriter {
-  from { width: 0; }
-  to { width: 24em; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 24em;
+  }
 }
 
 @keyframes blinkTextCursor {
-  from { border-right-color: rgba(249, 245, 215, 0.75); }
-  to { border-right-color: transparent; }
+  from {
+    border-right-color: rgba(249, 245, 215, 0.75);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
 }
 
 .anim-typewriter {
-  animation: typewriter 3s steps(44) 1s 1 normal both, 
-             blinkTextCursor 500ms steps(44) infinite normal;
+  animation: typewriter 3s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
 }
