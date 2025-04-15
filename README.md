@@ -1,6 +1,6 @@
 <!-- Cabeçalho -->
 
-# Página de Navegação - Maré Sustentável
+# Página de Navegação - Backpech
 
 > [!NOTE]
 > Esse repositório está sob licença
@@ -40,8 +40,6 @@ ___
 [![Instagram](https://skillicons.dev/icons?i=instagram)](https://www.instagram.com/back.pech/)
 [![Discord](https://skillicons.dev/icons?i=discord)](https://discord.gg/b3zP3ArVJk)
 [![E-mail](https://skillicons.dev/icons?i=gmail)](mailto:backpech.ctt@gmail.com)
-[![Linkedin](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/murilo-gritti)
+[![Linkedin](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/backpech)
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/moonrilo)
 <!-- Contato -->
-
-[^1]: [Site - Maré Sustentável](https://maresustentavel.com.br/?fbclid=PAZXh0bgNhZW0CMTEAAaZsUWGqXKi4GQ6Ks4f50_F43RgIZ1ejccWeTh24w7mdGY8wNAW-boDFH-A_aem_ZmFrZWR1bW15MTZieXRlcw)
