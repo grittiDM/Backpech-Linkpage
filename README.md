@@ -1,6 +1,6 @@
 <!-- Cabeçalho -->
 
-# Página de Navegação - Maré Sustentável
+# Página de Navegação - Backpech
 
 > [!NOTE]
 > Esse repositório está sob licença
